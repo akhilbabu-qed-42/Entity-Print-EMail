@@ -1,0 +1,11 @@
+my_module.entity_print_mail:
+  path: '/email/pdf/node/{node_id}'
+  defaults:
+    _title: 'Entity Print Mail'
+    _controller: '\Drupal\my_module\Controller\EntityPrintMailController::process'
+  requirements:
+    _permission: 'access content'
+  options:
+    parameters:
+      node_id:
+        type: entity:node
